@@ -7,7 +7,6 @@ $objectId = $_POST["objectId"];
 $uploadOk = 1;
 
 $alias = $_GET["alias"];
-//$alias = "aliasTst" . ".";
 // echo $alias;
 ?>
 
@@ -95,15 +94,15 @@ if ( $uploadOk == 1 ) {
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
   echo "Файл не загружен.<br><br>";
-  echo "<button type=\"button\"><a href=\"upload.html\"> Повторить? </a></button><br>";
+  echo "<button type=\"button\"><a href=\"upload.php\"> Повторить? </a></button><br>";
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     echo "Файл ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])) . " загружен на сервер как " . $target_file . "<br><br>";
-	echo "<button type=\"button\"><a href=\"upload.html\"> Загрузить еще? </a></button><br><br>";
+	echo "<button type=\"button\"><a href=\"upload.php?alias=$alias\"> Загрузить еще? </a></button><br><br>";
   } else {
     echo "Произошла ошибка при загрузке файла.<br>";
-	echo "<button type=\"button\"><a href=\"upload.html\"> Повторить? </a></button><br>";
+	echo "<button type=\"button\"><a href=\"upload.php\"> Повторить? </a></button><br>";
   }
 }
 
