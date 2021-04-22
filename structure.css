@@ -1,0 +1,40 @@
+.menu ul li{
+  padding: 7px;
+}
+.menu ul > li:hover{
+  background-color: #f96;
+}
+.menu ul ul > li:hover{
+  background-color: #69e;
+}
+.menu ul li, .menu ul{
+  display: inline-block;
+}
+.menu ul{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #f63;
+}
+.menu ul ul{
+  display: none;
+  position: absolute;
+  background-color: #369;
+  margin-top: 10px;
+  margin-left: -10px;
+}
+.menu ul a{
+  color: #fff;
+  text-decoration: none;
+}
+.menu ul ul a{
+  color: #fff;
+  text-decoration: none;
+}
+.menu li:hover ul{
+  display: block;
+}
+
+.menu li:hover li{
+  display: block;
+}

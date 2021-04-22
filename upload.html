@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div align = "center">
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  Загрузка файла .svg  :
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="hidden" name="fExt" id="fExt" value="svg">
+  <input type="submit" value="Загрузить на сервер" name="submit">
+</form><br>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  Загрузка файла .blend:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="hidden" name="fExt" id="fExt" value="blend">
+  <input type="submit" value="Загрузить на сервер" name="submit">
+</form><br>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  Загрузка файла .glb  :
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="hidden" name="fExt" id="fExt" value="glb">
+  <input type="submit" value="Загрузить на сервер" name="submit">
+</form><br>
+
+</div>
+</body>
+</html>

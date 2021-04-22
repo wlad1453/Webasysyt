@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<p>
+Список групп (заполнение полей таблицы objects_groups) в виде иерархического дерева с возможностью добавления, редактирования и удаления, при клике на кнопку редактирования попадаем в отдельную форму редактирования группы.<br>
+При добавлении группы создается папка группы с именем кодового обозначения группы внутри папки родительской группы. Если родителя нет, то папка создается в папке /actions/addObject, путь до которой указывается в качестве константы в начале скрипта панели администрирования. При удалении группы папка группы удаляется (удалить группу можно, только если к ней не привязан ни один объект)
+<br>
+<ul>
+    <li><a href="#">Добавление группы</a></li>
+    <li><a href="objects_group_structure.html">Редактирование существующей группы</a></li>
+    <li><a href="#">Удаление существующей группы</a></li>
+</ul>
+<form action="/action.php" autocomplete="on">
+  <label for="objects_groups">Группы объектов:</label>
+  <input list="objects_groups">
+  
+  <datalist id="objects_groups">
+    <option value="Мебель">
+    <option value="Техника">
+    <option value="Сантехника">
+    <option value="Электрооборудование">
+    <option value="Предметы интерьера">
+    <option value="Конструкции">
+    <option value="Ландшафт">
+  </datalist>
+  
+  <input type="submit" value="Ввод"><br/>
+  
+  <label for="objects_subgroups">Подгруппы:</label>
+  <input list="objects_subgroups1">
+  
+  <datalist id="objects_subgroups1">
+    <option value="Диваны и кресла">
+    <option value="Шкафы">
+    <option value="Мебель для гостиной">
+    <option value="Мебель для спальни">
+    <option value="Мебель для прихожей">
+    <option value="Мебель для кухни">
+    <option value="Мебель для детской">
+    <option value="Домашний кабинет">
+    <option value="Мебель для дачи">
+    <option value="Мебель для ванной">
+  </datalist>
+  
+  <datalist id="objects_subgroups2">
+    <option value="Техника для дома">
+    <option value="Техника для кухни">
+  </datalist>
+  
+  <datalist id="objects_subgroups3">
+    <option value="Сантехника для ванной">
+    <option value="Сантехника для кухни">
+    <option value="Аксессуары для ванной">
+    <option value="Отопление">
+  </datalist>
+  
+  <datalist id="objects_subgroups4">
+    <option value="Электрика">
+    <option value="Освещение"> 
+  </datalist>
+  
+  <datalist id="objects_subgroups5">
+    <option value="Декор">
+    <option value="Текстиль"> 
+  </datalist>
+  
+  <datalist id="objects_subgroups6">
+    <option value="Окна">
+    <option value="Двери">
+    <option value="Конструкции для дома">
+  </datalist>
+  
+  <datalist id="objects_subgroups7">
+    <option value="Деревья">
+    <option value="Растения домашние">
+    <option value="Растения уличные">
+  </datalist>
+  <input type="submit" value="Ввод">
+</form>
+<br><br>
+<button type="button"><a href="objects_group_structure.php">Назад </a></button>
+</p> 
+</html>

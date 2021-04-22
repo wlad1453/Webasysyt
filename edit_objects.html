@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<div>
+Редактирование полей таблицы objects<br>
+Редактирование списка настроек объекта (заполнение полей таблицы objects_settings)<br>
+Загрузка 3 файлов (.svg -> images\, blend и .glb -> models\), 
+файлы можно заменять новыми, при удалении объекта они удаляются, можно перейти к этим файлам по ссылке.</div>
+<br><br>
+<div>
+<form action="/action_page.php" method="get" target="_top">
+  <h3>Объект</h3>  
+  <!--
+  <label for="groupId">ID</label> 
+  <label for="groupId">Group ID (1000)</label> 
+  <label for="alias">Alias (0-9,A-Z,a-z)</label> 
+  <label for="caption">Caption</label> 
+  <label for="length">Lenght, m (10)</label> 
+  <label for="width">Width, m (8)</label> 
+  <label for="height">Height, m (5)</label> 
+  <label for="canPlace">canPlace</label> 
+  <label for="placeRules">placeRules</label> 
+  <label for="light">Light</label> -->
+  [_____ID____][_GroupID_][________Alias_________][________Caption_______][__Lenght__][__Width__][__Height__][Place][________pRules_______][Light]
+  <br>
+  <input type="number" id="id" name="id" min="0" max="100000" readonly> 
+  <input type="number" id="groupId" name="groupId" min="0" max="1000"> 
+  <input type="text"   id="alias"   name="alias">
+  <input type="text"   id="caption" name="caption">
+  <input type="number" step="0.01" id="length" name="length" min="0.01" max="10"> 
+  <input type="number" step="0.01" id="width"  name="width"  min="0.01" max="8"> 
+  <input type="number" step="0.01" id="height" name="height" min="0.01" max="5"> 
+  <!-- <input type="number" id="canPlace"   name="canPlace" min="1" max="3">  -->
+  <select name="canPlace" id="canPlace">
+	<option value = 1> 1.</option>
+	<option value = 2> 2.</option>
+	<option value = 3> 3.</option>
+  </select>  
+  <input type="text"   id="placeRules" name="placeRules">
+  <!-- <input type="number" id="light"      name="light"    min="0" max="1"> -->
+  <select name="light" id="light">
+	<option value = 0> 0.</option>
+	<option value = 1> 1.</option>
+  </select>
+  <br>
+  
+  <h3>Свойства объекта</h3>
+   [_objectID_][________Alias_________][Type][________Caption_______][_________Value_______][________Variants_______][_________Part_________]
+  <br>
+  <input type="number" id="objectId" name="objectId" min="0" max="1000" readonly> 
+  <input type="text"   id="aliasOS"   name="aliasOS">
+  <select name="type" id="type">
+	<option value = 1> 1.</option>
+	<option value = 2> 2.</option>
+  </select>
+  <input type="text"   id="captionOS" name="captionOS">
+  <input type="text"   id="valueOS" name="valueOS">
+  <input type="text"   id="variantsOS" name="variantsOS">
+  <input type="text"   id="partOS" name="partOS">
+   
+  <br><br><br>
+  <input type="submit" value="Submit">
+  <!-- <button type="submit">Submit</button> -->
+  <button type="submit" formaction="/action_page2.php">Новый объект</button>
+  <button type="submit" formaction="/action_page3.php">Редактировать</button>
+  <button type="submit" formaction="/action_page4.php">Удалить</button>
+  
+</form>
+<br><br>
+<iframe src="upload.html" align="center" height="200" width="740" style="border: 1px solid black; overflow: hidden; overflow-y:auto;">
+</iframe><br><br>
+<button type="button"><a href="read_edit_objects.php">Вернуться к списку объектов</a></button>
+</div>
+</html>

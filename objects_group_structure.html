@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="structure.css">
+</head>
+<p>
+<div align="center">
+<br>
+
+<nav class="menu">
+  <ul>
+    <li><a href="#">Мебель</a>
+	  <ul>
+        <li><a href="#">Диваны и кресла</a></li>
+        <li><a href="#">Шкафы</a></li>
+        <li><a href="#">Мебель для гостиной</a></li>
+        <li><a href="#">Мебель для спальни</a></li>
+		<li><a href="#">Мебель для прихожей</a></li>
+        <li><a href="#">Мебель для кухни</a></li>
+        <li><a href="#">Мебель для детской</a></li>
+        <li><a href="#">Домашний кабинет</a></li>
+		<li><a href="#">Мебель для дачи</a></li>
+        <li><a href="#">Мебель для ванной</a></li>
+      </ul>	
+	</li>	
+    <li><a href="#">Техника</a>    
+      <ul>
+        <li><a href="#">Техника для дома</a></li>
+        <li><a href="#">Техника для кухни</a></li>
+      </ul>    
+    </li>	
+    <li><a href="#">Сантехника</a>
+	  <ul>
+        <li><a href="#">Сантехника для ванной</a></li>
+        <li><a href="#">Сантехника для кухни</a></li>
+        <li><a href="#">Аксессуары для ванной</a></li>
+        <li><a href="#">Отопление</a></li>
+      </ul>  
+	</li>
+	
+    <li><a href="#">Электрооборудование</a>
+	  <ul>
+        <li><a href="#">Электрика</a></li>
+        <li><a href="#">Освещение</a></li>
+      </ul>    
+	</li>
+	
+	<li><a href="#">Предметы интерьера</a>
+	  <ul>
+        <li><a href="#">Декор</a></li>
+        <li><a href="#">Текстиль</a></li>
+	  </ul>
+	</li>
+	
+    <li><a href="#">Конструкции</a>
+	  <ul>
+        <li><a href="#">Окна</a></li>
+        <li><a href="#">Двери</a></li>
+        <li><a href="#">Конструкции для дома</a></li>
+      </ul>  
+	</li>
+	
+	<li><a href="#">Ландшафт</a>
+	  <ul>
+        <li><a href="#">Деревья</a></li>
+        <li><a href="#">Растения для дома</a></li>
+        <li><a href="#">Растения для дачи</a></li>
+      </ul>  
+	</li>
+
+  </ul>
+</nav>
+<br><br><br>
+<form action="/action.php" autocomplete="on">
+  <label for="objects_groups">Группы объектов:</label>
+  <input list="objects_groups">
+  
+  <datalist id="objects_groups">
+    <option value="Мебель">
+    <option value="Техника">
+    <option value="Сантехника">
+    <option value="Электрооборудование">
+    <option value="Предметы интерьера">
+    <option value="Конструкции">
+    <option value="Ландшафт">
+  </datalist>
+  
+  <input type="submit" value="Ввод"><br/>
+  
+  <label for="objects_subgroups">Подгруппы:</label>
+  <input list="objects_subgroups1">
+  
+  <datalist id="objects_subgroups1">
+    <option value="Диваны и кресла">
+    <option value="Шкафы">
+    <option value="Мебель для гостиной">
+    <option value="Мебель для спальни">
+    <option value="Мебель для прихожей">
+    <option value="Мебель для кухни">
+    <option value="Мебель для детской">
+    <option value="Домашний кабинет">
+    <option value="Мебель для дачи">
+    <option value="Мебель для ванной">
+  </datalist>
+  
+  <datalist id="objects_subgroups2">
+    <option value="Техника для дома">
+    <option value="Техника для кухни">
+  </datalist>
+  
+  <datalist id="objects_subgroups3">
+    <option value="Сантехника для ванной">
+    <option value="Сантехника для кухни">
+    <option value="Аксессуары для ванной">
+    <option value="Отопление">
+  </datalist>
+  
+  <datalist id="objects_subgroups4">
+    <option value="Электрика">
+    <option value="Освещение"> 
+  </datalist>
+  
+  <datalist id="objects_subgroups5">
+    <option value="Декор">
+    <option value="Текстиль"> 
+  </datalist>
+  
+  <datalist id="objects_subgroups6">
+    <option value="Окна">
+    <option value="Двери">
+    <option value="Конструкции для дома">
+  </datalist>
+  
+  <datalist id="objects_subgroups7">
+    <option value="Деревья">
+    <option value="Растения домашние">
+    <option value="Растения уличные">
+  </datalist>
+  <input type="submit" value="Ввод">
+</form>
+<br><br>
+<button type="button"><a href="SetUpPage.html">Назад </a></button>
+</div>
+</p> 
+</html>
