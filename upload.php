@@ -20,15 +20,15 @@ $alias = $_GET["alias"];
   <input type="file" 	name="fileToUpload" id="fileToUpload">
   <input type="hidden" 	name="fExt" 		id="fExt" 	value="svg">
   <input type="hidden" 	name="fName" 		id="fName" 	value="<?php echo $alias ?>">
-  <input type="submit" value="Загрузить на сервер" name="submit">
+  <input type="submit" 	name="submit"					value="Загрузить на сервер" >
 </form><br>
 
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
   Загрузка файла .blend:
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="hidden" name="fExt" id="fExt" 	value="blend">
-  <input type="hidden" name="fName" id="fName" 	value="<?php echo $alias ?>">
-  <input type="submit" value="Загрузить на сервер" name="submit">
+  <input type="file" 	name="fileToUpload" id="fileToUpload">
+  <input type="hidden" 	name="fExt" 	id="fExt"	value="blend">
+  <input type="hidden" 	name="fName" 	id="fName" 	value="<?php echo $alias ?>">
+  <input type="submit" 	name="submit"				value="Загрузить на сервер" >
 </form><br>
 
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
@@ -36,7 +36,7 @@ $alias = $_GET["alias"];
   <input type="file" 	name="fileToUpload" id="fileToUpload">
   <input type="hidden" 	name="fExt" 	id="fExt" 	value="glb">
   <input type="hidden" 	name="fName" 	id="fName" 	value="<?php echo $alias ?>">
-  <input type="submit" value="Загрузить на сервер" name="submit">
+  <input type="submit"  name="submit"				value="Загрузить на сервер" >
 </form><br>
 
 </div>
@@ -83,7 +83,7 @@ if ( $uploadOk == 1 ) {
 	$target_file = $target_dir . $fName . "." . $imageFileType;
 	// echo "Target $target_file <br>";
 	if ( file_exists($target_file) ) {										// Check if file already exists
-		echo "Файл с таким именем уже есть на сервере<br>Заменяем!<br><br>";
+		echo "Файл с таким именем уже есть на сервере! Заменяем!<br><br>";
 		unlink($target_file);
 	}
 }
@@ -99,7 +99,7 @@ if ($uploadOk == 0) {
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     echo "Файл ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])) . " загружен на сервер как " . $target_file . "<br><br>";
-	echo "<button type=\"button\"><a href=\"upload.php?alias=$alias\"> Загрузить еще? </a></button><br><br>";
+	echo "<button type=\"button\"><a href=\"" . $_SERVER['PHP_SELF'] . "\"> Загрузить еще? </a></button><br><br>";
   } else {
     echo "Произошла ошибка при загрузке файла.<br>";
 	echo "<button type=\"button\"><a href=\"upload.php\"> Повторить? </a></button><br>";
